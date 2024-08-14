@@ -1,0 +1,14 @@
+precos = {"celular": 1500, "camera": 1000, "fone de ouvido": 800, "monitor": 2000}
+
+while True:
+    x = input("Diga o nome do produto: ")
+    if precos.get(x) == None:
+        print("O produto não existe")
+        z = input("Gostaria de Cadastrar o produto? ")
+        if z.lower() == "s":
+            p = float(input("Diga o preço do produto: "))
+            precos[x] = p
+        print("Tente Novamente!")
+    else:
+        print(f"O produto {x} custa R${precos[x]}")
+        break
